@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>🚗 Smart Parking System</h2>
+
+<div class="menu">
+<a href="/">Home</a>
+<a href="/booking">Book Parking</a>
+<a href="/logout">Logout</a>
+</div>
+
+</div>
+
+<div class="dashboard">
+
+<h1>Welcome to Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Total Slots</h2>
+<h1>50</h1>
+</div>
+
+<div class="card">
+<h2>Available Slots</h2>
+<h1>35</h1>
+</div>
+
+<div class="card">
+<h2>Booked Slots</h2>
+<h1>15</h1>
+</div>
+
+</div>
+
+<br><br>
+
+<a href="/booking">
+<button>Book Parking</button>
+</a>
+
+<a href="/mybookings">
+<button>My Bookings</button>
+</a>
+
+<a href="/view_bookings">
+    <button>View Bookings</button>
+</a>
+
+</div>
+
+</body>
+</html>

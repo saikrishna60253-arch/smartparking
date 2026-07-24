@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Parking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+
+<h1>
+    {% if message %}
+<p style="color:green; font-size:20px;">
+    {{ message }}
+</p>
+{% endif %}
+Book Parking Slot</h1>
+
+{% if message %}
+<p style="color:red;">
+    {{ message }}
+</p>
+{% endif %}
+
+<form method="POST">
+
+
+<input type="text"
+       name="vehicle_number"
+       placeholder="Vehicle Number"
+       required>
+
+<select name="slot" required>
+    <option value="">Select Parking Slot</option>
+    <option value="1">A1</option>
+<option value="2">A2</option>
+<option value="3">A3</option>
+<option value="4">A4</option>
+<option value="5">A5</option>
+</select>
+
+<br><br>
+
+<input type="date"
+       name="booking_date"
+       required>
+
+<input type="time"
+       name="booking_time"
+       required>
+
+<br><br>
+
+<button type="submit">
+Book Now
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

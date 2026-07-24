@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Bookings</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<h1>All Parking Bookings</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>Booking ID</th>
+    <th>Vehicle Number</th>
+    <th>Slot</th>
+    <th>Date</th>
+    <th>Time</th>
+</tr>
+
+{% for booking in bookings %}
+
+<tr>
+
+<td>{{ booking[0] }}</td>
+
+<td>{{ booking[1] }}</td>
+
+<td>A{{ booking[2] }}</td>
+
+<td>{{ booking[3] }}</td>
+
+<td>{{ booking[4] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">
+    Back to Dashboard
+</a>
+
+</body>
+</html>
